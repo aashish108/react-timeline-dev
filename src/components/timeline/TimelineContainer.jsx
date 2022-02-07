@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 
 const Container = styled.div`
   position: relative;
-  background-color: inherit;
+  background-color: red;
   width: 50%;
 
   &:after {
@@ -59,7 +59,8 @@ const Container = styled.div`
 
   .content {
     padding: 20px 30px;
-    background-color: white;
+    color: white;
+    background-color: black;
     position: relative;
     border-radius: 6px;
   }

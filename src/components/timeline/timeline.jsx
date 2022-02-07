@@ -11,7 +11,7 @@ const TimelineGraph = styled.div`
     content: '';
     position: absolute;
     width: 6px;
-    background-color: black;
+    background-color: blue;
     top: 0;
     bottom: 0;
     left: 50%;
@@ -24,14 +24,12 @@ const Timeline =  () => {
 
   useEffect(() => {
     const timer = setTimeout(() => { setEventArray([...eventArray, {
-      title: Date.now(),
-      text: 'Lorem'
+      title: new Intl.DateTimeFormat('en-GB', { dateStyle: 'full', timeStyle: 'long' }).format(Date.now()),
+      text: 'Lorem ipsum'
     }])}, 5000);
 
     if (eventArray.length === 6) {
-      console.log('eventArray', eventArray);
       const newEventArray = eventArray.reverse().splice(0, 5);
-      console.log('newEventArray', newEventArray);
       setEventArray(newEventArray);
     }
 
